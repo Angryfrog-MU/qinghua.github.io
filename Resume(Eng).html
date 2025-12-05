@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qinghua Sun - Portfolio</title>
+  <meta name="description" content="Qinghua Sun - Portfolio, Resume, Projects, and Contact Information" />
+  <style>
+    :root {
+      --accent:#0a84ff; 
+      --bg:#f7f9fc; 
+      --card:#ffffff; 
+      --muted:#6b7280; 
+      font-family: Inter, "Segoe UI", Roboto, Arial;
+    }
+    body { margin:0; background:var(--bg); color:#0f1724; line-height:1.6; }
+    .container { max-width:950px; margin:40px auto; padding:24px; }
+    header { display:flex; gap:24px; align-items:center; }
+    .avatar { width:130px; height:130px; border-radius:12px; object-fit:cover; }
+    h1 { margin:0; font-size:2rem; }
+    .subtitle { margin-top:6px; color:var(--muted); white-space:pre-line; }
+    .card { background:var(--card); padding:22px; border-radius:16px; margin-top:24px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
+    h2 { margin-top:0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:14px; }
+    .project { padding:16px; border-radius:12px; border:1px solid #eef2f6; background:linear-gradient(180deg, #fafcff, #ffffff); }
+    .project h3 { margin:0 0 8px 0; }
+    .project p { margin:0; color:var(--muted); font-size:0.96rem; }
+    .tag { display:inline-block; padding:6px 10px; background:#f1f5f9; border-radius:999px; font-size:0.8rem; margin-right:6px; margin-top:6px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:8px; background:var(--accent); color:white; text-decoration:none; margin-right:10px; font-size:.95rem; }
+    footer { margin-top:40px; text-align:center; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header / Profile -->
+    <header>
+      <img class="avatar" src="avatar.jpg" alt="Profile Photo" />
+      <div>
+        <h1>Qinghua Sun</h1>
+        <div class="subtitle">
+ECE Student | Signal & Image Processing  
+AI & Embedded Systems Developer  
+Interdisciplinary Background in Product + Algorithm Engineering
+        </div>
+        <div style="margin-top:12px;">
+          <a class="btn" href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- One-sentence personal intro -->
+    <section class="card">
+      <h2>Personal Headline</h2>
+      <p style="font-size:1.05rem;">
+        Passionate about building intelligent systems at the intersection of embedded control, machine learning, and real-world applications.
+      </p>
+    </section>
+
+    <!-- About Me -->
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+I am an Electrical and Communication Engineering student with hands-on experience in signal processing, computer vision, embedded systems, and deep learning.  
+I have led multidisciplinary technical teams, developed real-world ML systems, and contributed to research spanning battery anomaly detection, autonomous vehicles, medical imaging, and AI-driven proctoring.  
+I enjoy transforming ideas into engineered systems — from STM32-based control platforms to data-driven predictive models.
+      </p>
+
+      <div style="margin-top:10px;">
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Image Processing</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Python</span>
+        <span class="tag">C</span>
+        <span class="tag">STM32</span>
+        <span class="tag">MATLAB</span>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="card">
+      <h2>Education</h2>
+      <p>
+        <strong>University of Electronic Science and Technology of China (UESTC)</strong><br>
+        B.Eng. in Communication Engineering (Joint Program with University of Glasgow)<br>
+        <em>GPA: 3.56/4.0 | 2021 – 2025</em>
+      </p>
+
+      <p>
+        <strong>University of California, San Diego (UCSD)</strong><br>
+        M.S. in Electrical and Computer Engineering (Signal & Image Processing Track)<br>
+        <em>2026 – 2027 (Planned)</em>
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section class="card">
+      <h2>Projects</h2>
+
+      <div class="grid">
+
+        <!-- Project 1 -->
+        <div class="project">
+          <h3>STM32 Smart Line-Patrolling Vehicle</h3>
+          <p>
+Developed a fully autonomous line-following vehicle using image processing.  
+Designed a 6-ROI visual tracking pipeline to extract lane edges and compute heading deviation for stable control.  
+Implemented HSV-based traffic-light detection and arrow-based path selection with >91% recognition accuracy.  
+Integrated ultrasonic obstacle detection, pedestrian recognition, and a PID-based closed-loop speed controller achieving ±3 cm tracking error.
+          </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <h3>DAD: Deep Learning Framework for Battery Anomaly Detection</h3>
+          <p>
+Created an end-to-end EV battery anomaly detector using a 1D-CNN autoencoder trained solely on normal operation data.  
+Introduced a dynamic percentile-based thresholding method (95th–99th) to adapt to environmental and aging effects, reducing false alarms by 40%.  
+Evaluated the system on 347 EVs and 90,000+ charging cycles, surpassing LSTM-AD baselines in AUC, recall, and robustness.
+          </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <h3>Ocean Salinity Prediction — GEARS Program (NCSU)</h3>
+          <p>
+Developed ML models (Random Forest, Linear Regression) to analyze ocean salinity trends.  
+Applied feature engineering on depth, coordinates, conductivity, and environmental variables.  
+Achieved 90% accuracy through proper normalization, regularization, and overfitting mitigation.
+          </p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+          <h3>COVID Chest X-ray Classification (NTU AI Internship)</h3>
+          <p>
+Implemented logistic regression and CNN-based pipelines for COVID image classification.  
+Enhanced dataset quality through denoising and augmentation.  
+Explored activation functions, hierarchical feature extraction, and self-attention mechanisms for improved accuracy and robustness.
+          </p>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+          <h3>AI Proctoring System — Vision Model Training & Optimization</h3>
+          <p>
+Annotated and cleaned a 100,000+ image dataset of exam-room surveillance frames.  
+Improved abnormal-behavior detection (e.g., phone use, whispering) to >90% F1 score.  
+Optimized detection pipeline, enhanced robustness to lighting and occlusion, and redesigned backend system for scalability.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section class="card">
+      <h2>Interests</h2>
+      <p>
+Beyond engineering, I enjoy exploring robotics, reading about cognitive science, studying autonomous systems,  
+and diving into data-driven storytelling. I also like photography and outdoor running.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="card">
+      <h2>Contact</h2>
+      <p>Email: 15105510419@163.com</p>
+      <p>Phone: +86 15105510419</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Qinghua Sun · Portfolio
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
