@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qinghua Sun - 个人主页</title>
+  <meta name="description" content="Qinghua Sun（孙卿华）的个人主页 — 简历、项目与联系方式" />
+  <style>
+    :root { --accent:#0a84ff; --bg:#f7f9fc; --card:#ffffff; --muted:#6b7280; font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    body { margin:0; background:var(--bg); color:#0f1724; line-height:1.6; }
+    .container{max-width:900px;margin:40px auto;padding:24px;}
+    header{display:flex;gap:20px;align-items:center;}
+    .avatar{width:110px;height:110px;border-radius:12px;object-fit:cover;}
+    h1{margin:0;font-size:1.8rem;}
+    .subtitle{color:var(--muted);margin-top:6px;white-space:pre-line;}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 2px 10px rgba(15,23,36,0.06);margin-top:20px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px;}
+    .project{padding:14px;border-radius:10px;border:1px solid #eef2f6;background:linear-gradient(180deg, #fafcff, #ffffff);}
+    .project h3{margin:0 0 6px 0;font-size:1.1rem;}
+    .project p{margin:0;color:var(--muted);font-size:.92rem;}
+    footer{margin-top:30px;color:var(--muted);font-size:.9rem;text-align:center;}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;margin-right:10px;font-size:.95rem;}
+    .tag{display:inline-block;border-radius:999px;padding:4px 8px;font-size:.8rem;background:#f1f5f9;color:#0f1724;margin-right:6px;margin-top:6px;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 头部信息 -->
+    <header>
+      <img class="avatar" src="avatar.jpg" alt="头像" />
+      <div>
+        <h1>Qinghua Sun（孙卿华）</h1>
+        <div class="subtitle">
+ECE 学生｜信号与图像处理方向
+AI & Embedded Systems Developer
+产品 & 算法工程跨领域背景
+        </div>
+      </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section class="card" id="about">
+      <h2>关于我</h2>
+      <p>
+我目前主修电子与通信工程，在信号与图像处理、嵌入式系统、人工智能算法等方向均具备系统实践经验。  
+曾在智能车辆、深度学习异常检测、电池健康管理、医学图像分类、AI 监考系统等多个项目中担任核心研发角色。
+      </p>
+      <div style="margin-top:10px;">
+        <span class="tag">Signal Processing</span>
+        <span class="tag">Image Processing</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">STM32</span>
+        <span class="tag">Python</span>
+        <span class="tag">C</span>
+        <span class="tag">Machine Learning</span>
+      </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section class="card" id="projects">
+      <h2>项目展示</h2>
+
+      <div class="grid">
+
+        <div class="project">
+          <h3>STM32 智能循迹车</h3>
+          <p>基于视觉的自主循迹车辆，支持交通灯识别、箭头导航、PID 调节、障碍物避让与行人检测。</p>
+        </div>
+
+        <div class="project">
+          <h3>电池异常检测深度学习框架 DAD</h3>
+          <p>提出端到端 EV 电池异常检测模型，结合自编码器与动态阈值策略，实现对未见故障的识别。</p>
+        </div>
+
+        <div class="project">
+          <h3>海洋盐度预测 ML 模型</h3>
+          <p>基于多特征的随机森林与线性回归模型，预测海洋盐度变化趋势，准确率达 90%。</p>
+        </div>
+
+        <div class="project">
+          <h3>NTU COVID 图像分类模型</h3>
+          <p>基于 CNN + 数据增强的肺部影像分类模型，研究激活函数与特征噪声处理策略。</p>
+        </div>
+
+        <div class="project">
+          <h3>AI 监考系统（图像识别）</h3>
+          <p>参与训练 10 万+ 监考图像数据集，提升异常行为识别性能并优化模型鲁棒性。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="card" id="contact">
+      <h2>联系方式</h2>
+      <p>邮箱：15105510419@163.com</p>
+      <p>电话：+86 15105510419</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Qinghua Sun · 简历与项目展示
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
